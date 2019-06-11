@@ -5,11 +5,14 @@ $("document").ready(function() {
     event.preventDefault();
     var favorites = ["bird", "food", "car", "city", "activity"]
 
-    favorites.forEach(function(favorite) {
-      var favVal = $("#"+favorite).val();
+    // favorites.forEach(function(favorite) {
+    //   var favVal = $("#"+favorite).val();
 
-      $("#listFav").append("<li>"+favVal+"</li>");
-    })
+    for (i=0;i<favorites.length;i++){
+      var value = $("#"+favorites[i]).val();
+      $("#listFav").append("<li>"+value+"</li>");
+
+    }
 
   });
 
